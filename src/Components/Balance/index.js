@@ -1,33 +1,33 @@
 import React from 'react';
-import { View,Text,StyleSheet  } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default function Balance({saldo,gasto}) {
- return (
-   <View style={styles.container}>
-    <View style={styles.item}>
-        <Text style={styles.itemTitle}>Saldo</Text>
-        <View style={styles.content}>
-            <Text style={styles.currenceSymbol}>R$</Text>
-            <Text style={styles.balance}>{saldo}</Text>
-            
+export default function Balance({ saldo, gasto }) {
+    return (
+        <View style={styles.container}>
+            <View style={styles.item}>
+                <Text style={styles.itemTitle}>Saldo</Text>
+                <View style={styles.content}>
+                    <Text style={styles.currenceSymbol}>R$</Text>
+                    <Text style={styles.balance}>{saldo}</Text>
+
+                </View>
+            </View>
+            <View style={styles.item}>
+                <Text style={styles.itemTitle}>Gastos</Text>
+                <View style={styles.content}>
+                    <Text style={styles.currenceSymbol}>R$</Text>
+                    <Text style={styles.expenses}>{gasto}</Text>
+
+                </View>
+            </View>
+
+
         </View>
-    </View>
-    <View style={styles.item}>
-        <Text style={styles.itemTitle}>Gastos</Text>
-        <View style={styles.content}>
-            <Text style={styles.currenceSymbol}>R$</Text>
-            <Text style={styles.expenses}>{gasto}</Text>
-            
-        </View>
-    </View>
-    
-    
-   </View> 
-  );
+    );
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         backgroundColor: '#FFF',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         marginTop: -24,
         marginStart: 14,
         marginEnd: 14,
-        borderRadius:  4,
+        borderRadius: 4,
         paddingTop: 22,
         paddingBottom: 22,
 
@@ -45,21 +45,21 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#DADADA'
     },
-    content:{
+    content: {
         flexDirection: 'row',
         alignItems: 'center'
     },
-    currenceSymbol:{
-        color:'#DADADA',
+    currenceSymbol: {
+        color: '#DADADA',
         marginRight: 6,
     },
-    balance:{
+    balance: {
         fontSize: 22,
-        color:'#2ecc71'
+        color: '#2ecc71'
     },
-    expenses:{
+    expenses: {
         fontSize: 22,
         color: '#e74c3c'
     }
-   
+
 })

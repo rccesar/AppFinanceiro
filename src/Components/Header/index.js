@@ -1,15 +1,15 @@
 import React from "react";
-import { View,StyleSheet, Text,StatusBar, TouchableOpacity } from "react-native";
-import {Feather} from '@expo/vector-icons'
+import { View, StyleSheet, Text, StatusBar, TouchableOpacity } from "react-native";
+import { Feather } from '@expo/vector-icons'
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
-export default function Header({name}){
-    return(
+export default function Header({ name }) {
+    return (
         <View style={styles.container}>
             <View style={styles.content}>
                 <Text style={styles.username}>{name}</Text>
-                <TouchableOpacity  style={styles.buttonUser}>
+                <TouchableOpacity style={styles.buttonUser}>
                     <Feather name="user" size={27} color="#FFF" ></Feather>
                 </TouchableOpacity>
             </View>
@@ -18,7 +18,7 @@ export default function Header({name}){
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         backgroundColor: '#8000FF',
         paddingTop: statusBarHeight,
         flexDirection: 'row',
@@ -26,24 +26,24 @@ const styles = StyleSheet.create({
         paddingEnd: 16,
         paddingBottom: 44,
     },
-    content:{
+    content: {
         flex: 1,
         alignItems: 'center',
-        flexDirection:'row',
+        flexDirection: 'row',
         justifyContent: 'space-between',
 
     },
-    username:{
+    username: {
         fontSize: 18,
         color: '#FFF',
         fontWeight: 'bold',
     },
-    buttonUser:{
+    buttonUser: {
         width: 44,
         height: 44,
         backgroundColor: '#DCDCDC	',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 44/2,
-    } 
+        borderRadius: 44 / 2,
+    }
 })
